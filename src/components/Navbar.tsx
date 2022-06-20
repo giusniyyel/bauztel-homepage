@@ -27,7 +27,6 @@ const LinkItem = (props: NextChakraLinkProps & LinkItemProps) => {
   return (
     <NextChakraLink
       href={props.href}
-      passHref
       scroll={false}
       p={2}
       color={active ? "white" : inactiveColor}

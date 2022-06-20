@@ -1,10 +1,8 @@
 import { ReactNode } from "react";
 import Head from "next/head";
-import { Container, Flex, Heading, HStack } from "@chakra-ui/react";
-import { ColorModeSwitcher } from "./ColorModeSwitcher";
-import { Logo } from "./Logo";
-import { NextChakraLink } from "./NextChakraLink";
+import { Flex } from "@chakra-ui/react";
 import { Navbar } from "./Navbar";
+import { Footer } from "./Footer";
 
 type Props = {
   children?: ReactNode;
@@ -37,8 +35,9 @@ export const Layout = ({ children, title = "Bauztel Café" }: Props) => (
       <meta property="og:image" content="https://www.bauztel.com/card.png" />
     </Head>
     <Navbar />
-    <Container maxWidth="full" pt={20}>
+    <Flex width="100%" maxWidth="full" pt={20}>
       {children}
-    </Container>
+    </Flex>
+    <Footer />
   </div>
 );
