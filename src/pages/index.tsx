@@ -1,5 +1,5 @@
-import { Text, Heading } from "@chakra-ui/react";
-import { Layout } from "../components/Layout"
+import { Text, Heading, VStack } from "@chakra-ui/react";
+import { Layout } from "../components/Layout";
 import { Chakra } from "../../Chakra";
 
 interface IndexProps {
@@ -9,50 +9,52 @@ interface IndexProps {
 const IndexPage = ({ cookies }: IndexProps) => (
   <Chakra cookies={cookies}>
     <Layout title="Inicio - Bauztel">
-      <Heading as="h1" size="4xl">
-        Bauztel Café
-      </Heading>
-      <Text>Café orgánico 100% Chiapas</Text>
-      <Heading as="h1" size="4xl">
-        Bauztel Café
-      </Heading>
-      <Text>Café orgánico 100% Chiapas</Text>
-      <Heading as="h1" size="4xl">
-        Bauztel Café
-      </Heading>
-      <Text>Café orgánico 100% Chiapas</Text>
-      <Heading as="h1" size="4xl">
-        Bauztel Café
-      </Heading>
-      <Text>Café orgánico 100% Chiapas</Text>
-      <Heading as="h1" size="4xl">
-        Bauztel Café
-      </Heading>
-      <Text>Café orgánico 100% Chiapas</Text>
-      <Heading as="h1" size="4xl">
-        Bauztel Café
-      </Heading>
-      <Text>Café orgánico 100% Chiapas</Text>
-      <Heading as="h1" size="4xl">
-        Bauztel Café
-      </Heading>
-      <Text>Café orgánico 100% Chiapas</Text>
-      <Heading as="h1" size="4xl">
-        Bauztel Café
-      </Heading>
-      <Text>Café orgánico 100% Chiapas</Text>
-      <Heading as="h1" size="4xl">
-        Bauztel Café
-      </Heading>
-      <Text>Café orgánico 100% Chiapas</Text>
-      <Heading as="h1" size="4xl">
-        Bauztel Café
-      </Heading>
-      <Text>Café orgánico 100% Chiapas</Text>
-      <Heading as="h1" size="4xl">
-        Bauztel Café
-      </Heading>
-      <Text>Café orgánico 100% Chiapas</Text>
+      <VStack>
+        <Heading as="h1" size="4xl">
+          Bauztel Café
+        </Heading>
+        <Text>Café orgánico 100% Chiapas</Text>
+        <Heading as="h1" size="4xl">
+          Bauztel Café
+        </Heading>
+        <Text>Café orgánico 100% Chiapas</Text>
+        <Heading as="h1" size="4xl">
+          Bauztel Café
+        </Heading>
+        <Text>Café orgánico 100% Chiapas</Text>
+        <Heading as="h1" size="4xl">
+          Bauztel Café
+        </Heading>
+        <Text>Café orgánico 100% Chiapas</Text>
+        <Heading as="h1" size="4xl">
+          Bauztel Café
+        </Heading>
+        <Text>Café orgánico 100% Chiapas</Text>
+        <Heading as="h1" size="4xl">
+          Bauztel Café
+        </Heading>
+        <Text>Café orgánico 100% Chiapas</Text>
+        <Heading as="h1" size="4xl">
+          Bauztel Café
+        </Heading>
+        <Text>Café orgánico 100% Chiapas</Text>
+        <Heading as="h1" size="4xl">
+          Bauztel Café
+        </Heading>
+        <Text>Café orgánico 100% Chiapas</Text>
+        <Heading as="h1" size="4xl">
+          Bauztel Café
+        </Heading>
+        <Text>Café orgánico 100% Chiapas</Text>
+        <Heading as="h1" size="4xl">
+          Bauztel Café
+        </Heading>
+        <Text>Café orgánico 100% Chiapas</Text>
+        <Heading as="h1" size="4xl">
+          Bauztel Café
+        </Heading>
+        <Text>Café orgánico 100% Chiapas</Text>
+      </VStack>
     </Layout>
   </Chakra>
 );
