@@ -14,6 +14,7 @@ const breakpoints = createBreakpoints({
 })
 
 const theme = extendTheme({
+  initialColorMode: 'light',
   semanticTokens: {
     colors: {
       text: {

@@ -1,4 +1,3 @@
-import NextLink from "next/link";
 import { useRouter } from "next/router";
 import {
   Box,
@@ -9,9 +8,10 @@ import {
   Heading,
   Flex,
 } from "@chakra-ui/react";
-import { NextChakraLink } from "./NextChakraLink";
+import { NextChakraLink, NextChakraLinkProps } from "./NextChakraLink";
 import { SellButton } from "./SellButton";
 import { Logo } from "./Logo";
+import { ColorModeSwitcher } from "./ColorModeSwitcher";
 
 type LinkItemProps = {
   children?: React.ReactNode;
@@ -20,29 +20,32 @@ type LinkItemProps = {
   target?: string;
 };
 
-const LinkItem = (props: LinkProps & LinkItemProps) => {
+const LinkItem = (props: NextChakraLinkProps & LinkItemProps) => {
   const active = props.path === props.href;
-  const inactiveColor = "blue";
+  const inactiveColor = "#1E3760";
 
   return (
-    <NextChakraLink href={props.href} passHref scroll={false}>
-        <Link
-          p={2}
-          color={active ? "white" : inactiveColor}
-          target={props.target}
-          {...props}
-        >
-          {props.children}
-        </Link>
+    <NextChakraLink
+      href={props.href}
+      passHref
+      scroll={false}
+      p={2}
+      color={active ? "white" : inactiveColor}
+      target={props.target}
+      {...props}
+    >
+      {props.children}
     </NextChakraLink>
   );
 };
 
 export const Navbar = (props: any) => {
-  const { pathname } = useRouter();
+  const { asPath } = useRouter();
+
   return (
     <>
       <Box
+        backgroundColor="#F6A702"
         position="fixed"
         w="100%"
         css={{ backdropFilter: "blur(10px)" }}
@@ -61,14 +64,17 @@ export const Navbar = (props: any) => {
             <Logo h="4em" mr={4} />
           </Flex>
           <HStack spacing={12} mt={{ base: 4, md: 0 }}>
-            <LinkItem href="/" path={pathname}>
-              Home
+            <LinkItem href="/" path={asPath} fontWeight="bold">
+              Inicio
             </LinkItem>
-            <LinkItem href="/about-us" path={pathname}>
-              About
+            <LinkItem href="/our-coffee" path={asPath} fontWeight="bold">
+              Nuestro Café
             </LinkItem>
-            <LinkItem href="/works" path={pathname}>
-              Works
+            <LinkItem href="/about-us" path={asPath} fontWeight="bold">
+              Nosotros
+            </LinkItem>
+            <LinkItem href="/contact-us" path={asPath} fontWeight="bold">
+              Contáctanos
             </LinkItem>
           </HStack>
           <SellButton justifySelf="flex-end" />
