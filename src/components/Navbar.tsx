@@ -2,16 +2,12 @@ import { useRouter } from "next/router";
 import {
   Box,
   Container,
-  Link,
-  LinkProps,
-  HStack,
-  Heading,
+  Stack,
   Flex,
 } from "@chakra-ui/react";
 import { NextChakraLink, NextChakraLinkProps } from "./NextChakraLink";
 import { SellButton } from "./SellButton";
 import { Logo } from "./Logo";
-import { ColorModeSwitcher } from "./ColorModeSwitcher";
 
 type LinkItemProps = {
   children?: React.ReactNode;
@@ -45,13 +41,15 @@ export const Navbar = (props: any) => {
     <>
       <Box
         backgroundColor="#F6A702"
-        position="fixed"
+        position="sticky"
         w="100%"
-        css={{ backdropFilter: "blur(10px)" }}
-        zIndex={1}
+        top={0}
+        as="header"
+        zIndex={2}
         {...props}
       >
         <Container
+          as="nav"
           display="flex"
           p={2}
           maxW="container.xl"
@@ -62,7 +60,13 @@ export const Navbar = (props: any) => {
           <Flex align="center" mr={5}>
             <Logo h="4em" mr={4} />
           </Flex>
-          <HStack spacing={12} mt={{ base: 4, md: 0 }}>
+          <Stack
+            spacing={12}
+            mt={{ base: 4, md: 0 }}
+            direction={{ base: "column", md: "row" }}
+            display={{ base: "none", md: "flex" }}
+            width={{ base: "full", md: "auto" }}
+          >
             <LinkItem href="/" path={asPath} fontWeight="bold">
               Inicio
             </LinkItem>
@@ -75,7 +79,7 @@ export const Navbar = (props: any) => {
             <LinkItem href="/contact-us" path={asPath} fontWeight="bold">
               Contáctanos
             </LinkItem>
-          </HStack>
+          </Stack>
           <SellButton justifySelf="flex-end" />
         </Container>
       </Box>
