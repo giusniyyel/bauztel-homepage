@@ -10,7 +10,7 @@ type Props = {
 };
 
 export const Layout = ({ children, title = "Bauztel Café" }: Props) => (
-  <div>
+  <>
     <Head>
       <title>{title}</title>
       <meta charSet="utf-8" />
@@ -35,9 +35,9 @@ export const Layout = ({ children, title = "Bauztel Café" }: Props) => (
       <meta property="og:image" content="https://www.bauztel.com/card.png" />
     </Head>
     <Navbar />
-    <Flex width="100%" maxWidth="full" pt={20}>
+    <Flex as="main" flexDirection="column" minH="100vh">
       {children}
     </Flex>
     <Footer />
-  </div>
+  </>
 );

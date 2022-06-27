@@ -3,7 +3,7 @@ import {
   Container,
   Link,
   LinkProps,
-  HStack,
+  Stack,
   VStack,
   Heading,
   Text,
@@ -13,42 +13,31 @@ import {
 import { NextChakraLink, NextChakraLinkProps } from "./NextChakraLink";
 
 export const Footer = (props: FlexProps) => {
+  let actualYear = new Date().getFullYear();
+
   return (
     <>
-      <Flex
-        as="footer"
-        py="2rem"
-        w="100%"
-        maxWidth="full"
-        bgColor="#1E3760"
-        mt={32}
-        style={{
-          position: "absolute",
-          left: 0,
-          right: 0,
-          bottom: 0,
-        }}
-      >
-        <VStack w="100%">
-          <HStack></HStack>
-          <Container
+      <Flex as="footer" bgColor="#1E3760" py={2} position="sticky">
+        <Container p={4} maxW="container.xl">
+          <Stack
             display="flex"
-            maxW="container.xl"
             alignItems="center"
             justifyContent="space-between"
-            justifySelf="flex-bottom"
+            direction={{ base: "column", md: "row" }}
+            width={{ base: "full", md: "auto" }}
           >
-            <Text color="white" mr={0}>
-              Copyright © 2022 Bauztel Café. Todos los derechos reservados.
+            <Text color="white" align={{ base: "right", md: "center" }}>
+              Copyright © {actualYear} Bauztel Café. Todos los derechos
+              reservados.
             </Text>
-            <Text color="white" marginLeft={0}>
+            <Text color="white">
               Powered by{" "}
               <NextChakraLink href="https://www.giusniyyel.com">
                 GiusNiyyel
               </NextChakraLink>
             </Text>
-          </Container>
-        </VStack>
+          </Stack>
+        </Container>
       </Flex>
     </>
   );
