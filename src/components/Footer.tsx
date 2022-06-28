@@ -17,7 +17,7 @@ export const Footer = (props: FlexProps) => {
 
   return (
     <>
-      <Flex as="footer" bgColor="#1E3760" py={2} position="sticky">
+      <Flex as="footer" bgColor="#1E3760" py={2} position="sticky" mt={8}>
         <Container p={4} maxW="container.xl">
           <Stack
             display="flex"
@@ -26,11 +26,11 @@ export const Footer = (props: FlexProps) => {
             direction={{ base: "column", md: "row" }}
             width={{ base: "full", md: "auto" }}
           >
-            <Text color="white" align={{ base: "right", md: "center" }}>
+            <Text color="white" align="center">
               Copyright © {actualYear} Bauztel Café. Todos los derechos
               reservados.
             </Text>
-            <Text color="white">
+            <Text color="white" align="center">
               Powered by{" "}
               <NextChakraLink href="https://www.giusniyyel.com">
                 GiusNiyyel
