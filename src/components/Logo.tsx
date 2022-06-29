@@ -21,7 +21,7 @@ export const Logo = (props: ImageProps) => {
   return (
     <>
       <NextChakraLink href="/">
-        <Image src="/logo.svg" alt="Bauztel Logo" {...props} />
+        <Image src="/logo.svg" alt="Bauztel Logo" animation={animation} {...props} />
       </NextChakraLink>
     </>
   );

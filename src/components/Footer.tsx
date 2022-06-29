@@ -1,18 +1,12 @@
 import {
-  Box,
   Container,
-  Link,
-  LinkProps,
   Stack,
-  VStack,
-  Heading,
   Text,
   Flex,
-  FlexProps,
 } from "@chakra-ui/react";
-import { NextChakraLink, NextChakraLinkProps } from "./NextChakraLink";
+import { NextChakraLink } from "./NextChakraLink";
 
-export const Footer = (props: FlexProps) => {
+export const Footer = () => {
   let actualYear = new Date().getFullYear();
 
   return (

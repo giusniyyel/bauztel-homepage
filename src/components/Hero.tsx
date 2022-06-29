@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Flex, VStack, Center, Heading, Text } from "@chakra-ui/react";
+import { Flex, VStack, Heading, Text } from "@chakra-ui/react";
 
 type Props = {
   children?: ReactNode;
