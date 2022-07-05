@@ -1,4 +1,4 @@
-import { Text, Heading, VStack } from "@chakra-ui/react";
+import { Text, VStack } from "@chakra-ui/react";
 import { Layout } from "../components/Layout";
 import { Chakra } from "../../Chakra";
 
@@ -10,50 +10,12 @@ const IndexPage = ({ cookies }: IndexProps) => (
   <Chakra cookies={cookies}>
     <Layout title="Inicio - Bauztel">
       <VStack>
-        <Heading as="h1" size="4xl">
+        <Text textStyle="h1" as="h1">
           Bauztel Café
-        </Heading>
-        <Text>Café orgánico 100% Chiapas</Text>
-        <Heading as="h1" size="4xl">
-          Bauztel Café
-        </Heading>
-        <Text>Café orgánico 100% Chiapas</Text>
-        <Heading as="h1" size="4xl">
-          Bauztel Café
-        </Heading>
-        <Text>Café orgánico 100% Chiapas</Text>
-        <Heading as="h1" size="4xl">
-          Bauztel Café
-        </Heading>
-        <Text>Café orgánico 100% Chiapas</Text>
-        <Heading as="h1" size="4xl">
-          Bauztel Café
-        </Heading>
-        <Text>Café orgánico 100% Chiapas</Text>
-        <Heading as="h1" size="4xl">
-          Bauztel Café
-        </Heading>
-        <Text>Café orgánico 100% Chiapas</Text>
-        <Heading as="h1" size="4xl">
-          Bauztel Café
-        </Heading>
-        <Text>Café orgánico 100% Chiapas</Text>
-        <Heading as="h1" size="4xl">
-          Bauztel Café
-        </Heading>
-        <Text>Café orgánico 100% Chiapas</Text>
-        <Heading as="h1" size="4xl">
-          Bauztel Café
-        </Heading>
-        <Text>Café orgánico 100% Chiapas</Text>
-        <Heading as="h1" size="4xl">
-          Bauztel Café
-        </Heading>
-        <Text>Café orgánico 100% Chiapas</Text>
-        <Heading as="h1" size="4xl">
-          Bauztel Café
-        </Heading>
-        <Text>Café orgánico 100% Chiapas</Text>
+        </Text>
+        <Text textStyle="p" as="p">
+          Café orgánico 100% Chiapas
+        </Text>
       </VStack>
     </Layout>
   </Chakra>
