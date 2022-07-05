@@ -4,9 +4,15 @@ import {
   Container,
   Stack,
   Flex,
+  Menu,
+  MenuItem,
+  IconButton,
+  MenuButton,
+  MenuList,
 } from "@chakra-ui/react";
 import { NextChakraLink, NextChakraLinkProps } from "./NextChakraLink";
-import { SellButton } from "./SellButton";
+import { NextChakraLinkButton } from "./NextChakraLinkButton";
+import { HamburgerIcon } from "@chakra-ui/icons";
 import { Logo } from "./Logo";
 
 type LinkItemProps = {
@@ -22,8 +28,10 @@ const LinkItem = (props: NextChakraLinkProps & LinkItemProps) => {
 
   return (
     <NextChakraLink
+      fontWeight={"bold"}
       href={props.href}
       p={2}
+      _hover={{ color: "primary.900" }}
       color={active ? "white" : inactiveColor}
       target={props.target}
       {...props}
@@ -32,6 +40,13 @@ const LinkItem = (props: NextChakraLinkProps & LinkItemProps) => {
     </NextChakraLink>
   );
 };
+
+const navLinks = [
+  { title: "Inicio", path: "/" },
+  { title: "Nuestro Café", path: "/our-coffee" },
+  { title: "Nosotros", path: "/about" },
+  { title: "Contáctanos", path: "/contact" },
+];
 
 export const Navbar = (props: any) => {
   const { asPath } = useRouter();
@@ -57,7 +72,7 @@ export const Navbar = (props: any) => {
           justifyContent="space-between"
         >
           <Flex align="center" mr={5}>
-            <Logo h="4em" mr={4} />
+            <Logo h={{ base: "2em", lg: "4em" }} mr={4} />
           </Flex>
           <Stack
             spacing={12}
@@ -66,20 +81,32 @@ export const Navbar = (props: any) => {
             display={{ base: "none", md: "flex" }}
             width={{ base: "full", md: "auto" }}
           >
-            <LinkItem href="/" path={asPath} fontWeight="bold">
-              Inicio
-            </LinkItem>
-            <LinkItem href="/our-coffee" path={asPath} fontWeight="bold">
-              Nuestro Café
-            </LinkItem>
-            <LinkItem href="/about-us" path={asPath} fontWeight="bold">
-              Nosotros
-            </LinkItem>
-            <LinkItem href="/contact-us" path={asPath} fontWeight="bold">
-              Contáctanos
-            </LinkItem>
+            {navLinks.map((link, index) => (
+              <LinkItem key={index} href={link.path} path={asPath}>
+                {link.title}
+              </LinkItem>
+            ))}
+            <NextChakraLinkButton href="/become-seller" justifySelf="flex-end">
+              ¡Vende café!
+            </NextChakraLinkButton>
           </Stack>
-          <SellButton justifySelf="flex-end" />
+          <Box ml={2} display={{ base: "inline-block", md: "none" }}>
+            <Menu isLazy id="navbar-menu">
+              <MenuButton
+                as={IconButton}
+                icon={<HamburgerIcon />}
+                variant="outline"
+                aria-label="Options"
+              />
+              <MenuList>
+                {navLinks.map((link, index) => (
+                  <NextChakraLink key={index} href={link.path} passHref>
+                    <MenuItem>{link.title}</MenuItem>
+                  </NextChakraLink>
+                ))}
+              </MenuList>
+            </Menu>
+          </Box>
         </Container>
       </Box>
     </>

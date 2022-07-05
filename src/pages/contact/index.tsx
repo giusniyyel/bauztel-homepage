@@ -20,7 +20,7 @@ interface IndexProps {
   cookies?: string;
 }
 
-const onSuccessCaptcha= () => {
+const onSuccessCaptcha = () => {
   console.log("Hubo un cambio");
 };
 
