@@ -1,5 +1,5 @@
 import "@fontsource/nunito";
-import "@fontsource/source-code-pro";
+import "@fontsource/space-mono";
 
 import {
   ChakraProvider,
