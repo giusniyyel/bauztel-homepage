@@ -34,10 +34,13 @@ export const Layout = ({ children, title = "Bauztel Café" }: Props) => (
       <meta property="og:type" content="website" />
       <meta property="og:image" content="https://www.bauztel.com/card.png" />
     </Head>
-    <Navbar />
-    <Flex as="main" flexDirection="column" minH="100vh">
-      {children}
+    {/* This flex will fix the footer position to bottom of the page*/}
+    <Flex as="div" flexDirection="column" minHeight={"100vh"} w="100%">
+      <Navbar />
+      <Flex as="main" flexDirection="column" flexGrow={1}>
+        {children}
+      </Flex>
+      <Footer />
     </Flex>
-    <Footer />
   </>
 );

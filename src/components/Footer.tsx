@@ -26,8 +26,6 @@ export const Footer = () => {
         as="footer"
         bgColor="#1E3760"
         py={2}
-        position="sticky"
-        mt={8}
         flexDirection="column"
         textColor="white"
       >
@@ -68,8 +66,6 @@ export const Footer = () => {
               <Link href={"#"}>LinkedIn</Link>
             </Stack>
           </SimpleGrid>
-        </Container>
-        <Container p={4} maxW="container.xl">
           <Stack
             display="flex"
             alignItems="center"
