@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { NextChakraLink, NextChakraLinkProps } from "./NextChakraLink";
 import { NextChakraLinkButton } from "./NextChakraLinkButton";
-import { HamburgerIcon } from "@chakra-ui/icons";
+import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { Logo } from "./Logo";
 
 type LinkItemProps = {
@@ -29,10 +29,14 @@ const LinkItem = (props: NextChakraLinkProps & LinkItemProps) => {
   return (
     <NextChakraLink
       fontWeight={"bold"}
-      href={props.href}
       p={2}
-      _hover={{ color: "primary.900" }}
+      _hover={{
+        bg: "secondary.600",
+        textDecoration: "none",
+      }}
       color={active ? "white" : inactiveColor}
+      rounded={"md"}
+      href={props.href}
       target={props.target}
       {...props}
     >
@@ -92,19 +96,38 @@ export const Navbar = (props: any) => {
           </Stack>
           <Box ml={2} display={{ base: "inline-block", md: "none" }}>
             <Menu isLazy id="navbar-menu">
-              <MenuButton
-                as={IconButton}
-                icon={<HamburgerIcon />}
-                variant="outline"
-                aria-label="Options"
-              />
-              <MenuList>
-                {navLinks.map((link, index) => (
-                  <NextChakraLink key={index} href={link.path} passHref>
-                    <MenuItem>{link.title}</MenuItem>
-                  </NextChakraLink>
-                ))}
-              </MenuList>
+              {({ isOpen }) => (
+                <>
+                  <MenuButton
+                    isActive={isOpen}
+                    as={IconButton}
+                    variant={"ghost"}
+                    cursor={"pointer"}
+                    icon={
+                      isOpen ? (
+                        <CloseIcon />
+                      ) : (
+                        <HamburgerIcon color="primary.500" />
+                      )
+                    }
+                    aria-label="Options"
+                  />
+                  <MenuList
+                    zIndex={5}
+                    border={"none"}
+                    boxShadow={"2px 4px 6px 2px rgba(160, 174, 192, 0.6)"}
+                  >
+                    {navLinks.map((link, index) => (
+                      <NextChakraLink key={index} href={link.path} passHref>
+                        <MenuItem>{link.title}</MenuItem>
+                      </NextChakraLink>
+                    ))}
+                    <NextChakraLink href={"/become-seller"} passHref>
+                      <MenuItem>Vender Café</MenuItem>
+                    </NextChakraLink>
+                  </MenuList>
+                </>
+              )}
             </Menu>
           </Box>
         </Container>
