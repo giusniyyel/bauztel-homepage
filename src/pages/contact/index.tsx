@@ -11,8 +11,8 @@ import {
   Box,
   Button,
 } from "@chakra-ui/react";
-import { Layout } from "../../components/Layout";
-import { Hero } from "../../components/Hero";
+import { Layout } from "../../components/Layout/Main"
+import { Hero } from "../../components/Home/Hero";
 import { Chakra } from "../../../Chakra";
 import ReCAPTCHA from "react-google-recaptcha";
 

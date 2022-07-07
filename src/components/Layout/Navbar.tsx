@@ -10,10 +10,10 @@ import {
   MenuButton,
   MenuList,
 } from "@chakra-ui/react";
-import { NextChakraLink, NextChakraLinkProps } from "./NextChakraLink";
-import { NextChakraLinkButton } from "./NextChakraLinkButton";
+import { NextChakraLink, NextChakraLinkProps } from "../Utils/NextChakraLink";
+import { NextChakraLinkButton } from "../Utils/NextChakraLinkButton";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-import { Logo } from "./Logo";
+import { Logo } from "../Utils/Logo";
 
 type LinkItemProps = {
   children?: React.ReactNode;
@@ -58,7 +58,7 @@ export const Navbar = (props: any) => {
   return (
     <>
       <Box
-        backgroundColor="#F6A702"
+        backgroundColor={"white"}
         position="sticky"
         w="100%"
         top={0}
@@ -76,7 +76,7 @@ export const Navbar = (props: any) => {
           justifyContent="space-between"
         >
           <Flex align="center" mr={5}>
-            <Logo h={{ base: "2em", lg: "4em" }} mr={4} />
+            <Logo />
           </Flex>
           <Stack
             spacing={12}

@@ -1,5 +1,5 @@
 import { Text, VStack } from "@chakra-ui/react";
-import { Layout } from "../components/Layout";
+import { Layout } from "../components/Layout/Main";
 import { Chakra } from "../../Chakra";
 
 interface IndexProps {

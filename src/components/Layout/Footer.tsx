@@ -7,7 +7,7 @@ import {
   TextProps,
   SimpleGrid,
 } from "@chakra-ui/react";
-import { NextChakraLink } from "./NextChakraLink";
+import { NextChakraLink } from "../Utils/NextChakraLink";
 
 const ListHeader = ({ children }: TextProps) => {
   return (

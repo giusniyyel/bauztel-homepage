@@ -10,7 +10,7 @@ const breakpoints = createBreakpoints({
 });
 
 const colors = {
-  primary: {
+  bauztel_primary: {
     900: "#0c1626",
     800: "#122139",
     700: "#182c4d",
@@ -21,7 +21,7 @@ const colors = {
     200: "#61738f",
     100: "#8e9baf",
   },
-  secondary: {
+  bauztel_secondary: {
     900: "#624200",
     800: "#936401",
     700: "#c48501",
@@ -31,6 +31,12 @@ const colors = {
     300: "#f7b834",
     200: "#fad380",
     100: "#fce4b3",
+  },
+  coffee: {
+    500: "#220d10",
+  },
+  beige: {
+    500: "#faf8f6",
   },
 };
 
@@ -84,11 +90,20 @@ const textStyles = {
   },
 };
 
+const styles = {
+  global: {
+    svg: {
+      fill: "blue",
+    },
+  },
+};
+
 const theme = extendTheme({
   initialColorMode: "light",
   useSystemColorMode: false,
   colors,
   textStyles,
+  styles,
   fonts,
   breakpoints,
 });
