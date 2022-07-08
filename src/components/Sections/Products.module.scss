@@ -1,0 +1,48 @@
+@import 'mixins';
+
+.container {
+  margin-block: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+
+  @include tablet {
+    grid-template-columns: 1fr 400px;
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.heading {
+  font-size: 60px;
+}
+
+.description {
+  font-size: 20px;
+}
+
+.wrapper {
+  max-width: 85%;
+}
+
+.slider {
+  margin: auto;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 5px;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-snap-align: start;
+  height: 340px;
+  overflow: hidden;
+}
+
+.productTitle {
+  font-size: 35px;
+}
+
+.productDescription {
+  font-size: 20px;
+}

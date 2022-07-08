@@ -1,4 +1,4 @@
-.hero{
+.hero {
     height: calc(100vh - var(--header-height));
     display: grid;
     align-items: center;
@@ -11,42 +11,49 @@
     grid-template-columns: 1fr 1fr;
     align-items: center;
 }
+
 .title {
     font-size: 80px;
     // max-width: 50%;
 }
+
 .description {
     font-size: 22px;
     // max-width: 50%;
     line-height: 1.7;
     margin-bottom: 20px;
 }
+
 .button {
     border-radius: 1000px;
     font-size: 22px;
     padding-inline: 20px;
 }
-.features{
+
+.features {
     height: 100%;
     display: grid;
     align-content: space-around;
     grid-template-rows: repeat(3, 1fr);
 }
-.item{
+
+.item {
     height: 100%;
     display: grid;
     place-content: center;
 }
+
 .count {
     color: var(--accent);
     font-weight: bold;
     position: relative;
     margin-bottom: 15px;
     font-size: 35px;
+
     &::before {
         position: absolute;
         left: -10px;
-        top: 10px;
+        top: 0px;
         z-index: -1;
         content: '';
         background-color: var(--background-card);
@@ -55,6 +62,7 @@
         border-radius: 1000px;
     }
 }
+
 .name {
     font-size: 22px;
     font-weight: bold;

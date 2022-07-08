@@ -1,0 +1,7 @@
+.product {
+  scroll-snap-align: center;
+  width: 200px;
+  height: 300px;
+  border-radius: var(--min-radius);
+  box-shadow: var(--card-shadow);
+}
