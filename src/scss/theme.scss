@@ -1,3 +1,5 @@
+@import 'mixins';
+
 * {
   margin: 0;
   padding: 0;
@@ -19,6 +21,15 @@
   // sizes
   --layout-padding: 100px;
   --header-height: 80px;
+  --card-shadow: -1px 2px 20px 5px rgba(34, 13, 16, 0.021);
+
+  @include tablet {
+    --layout-padding: 50px;
+  }
+
+  @include mobile {
+    --layout-padding: 10px;
+  }
 }
 
 *::selection {
@@ -32,17 +43,22 @@ body {
   min-height: 100vh;
   background-color: var(--background-body);
 }
+
 svg {
   width: 1.25em;
   height: 1.25em;
   fill: currentColor;
 }
+
 main {
   flex-grow: 1;
 }
+
 p {
   color: var(--foreground-text);
+  line-height: 1.7;
 }
+
 footer,
 header,
 article {
@@ -62,6 +78,13 @@ li {
 img {
   width: 100%;
   max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--primary);
 }
 
 button,
@@ -106,6 +129,7 @@ button::selection {
 input {
   background-color: var(--background-body);
 }
+
 .container {
   padding-inline: var(--layout-padding);
 }
