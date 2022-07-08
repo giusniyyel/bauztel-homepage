@@ -1,8 +1,5 @@
 export const Footer = () => {
-  let actualYear = new Date().getFullYear();
+  let actualYear = new Date().getFullYear()
 
-  return (
-    <>
-    </>
-  );
-};
+  return <></>
+}

@@ -1,8 +1,5 @@
-import { Layout } from "../../components/Layout/Main"
+import { Layout } from '../../components/Layout/Main'
 
-const ContactUsPage = () => (
-    <Layout title="Contáctanos - Bauztel">
-    </Layout>
-);
+const ContactUsPage = () => <Layout title='Contáctanos - Bauztel'></Layout>
 
-export default ContactUsPage;
+export default ContactUsPage

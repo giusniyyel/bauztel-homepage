@@ -1,14 +1,14 @@
-import { ReactNode } from "react";
-import Head from "next/head";
-import { Navbar } from "./Navbar";
-import { Footer } from "./Footer";
+import { ReactNode } from 'react'
+import Head from 'next/head'
+import { Navbar } from './Navbar'
+import { Footer } from './Footer'
 
 type Props = {
-  children?: ReactNode;
-  title?: string;
-};
+  children?: ReactNode
+  title?: string
+}
 
-export const Layout = ({ children, title = "Bauztel Café" }: Props) => (
+export const Layout = ({ children, title = 'Bauztel Café' }: Props) => (
   <>
     <Head>
       <title>{title}</title>
@@ -18,4 +18,4 @@ export const Layout = ({ children, title = "Bauztel Café" }: Props) => (
     {children}
     <Footer />
   </>
-);
+)

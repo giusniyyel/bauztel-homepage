@@ -1,6 +1,3 @@
 export const Logo = () => {
-  return (
-    <>
-    </>
-  );
-};
+  return <></>
+}

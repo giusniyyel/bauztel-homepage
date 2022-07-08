@@ -9,7 +9,7 @@
       "#data/": ["./shared/data/*"],
       "#utils/": ["./shared/utils/*"],
       "#libs/": ["./shared/libs/*"],
-      "#types/": ["./shared/types"],
+      "#types/": ["./shared/types"]
     },
     "allowJs": true,
     "skipLibCheck": true,

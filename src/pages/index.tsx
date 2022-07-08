@@ -1,14 +1,13 @@
-import { Layout } from "../components/Layout/Main";
+import { Layout } from '../components/Layout/Main'
 import Hero from '#components/Sections/Hero'
 const IndexPage = () => (
-    <Layout title="Inicio - Bauztel">
-        <section className='container'>
-            <main>
-                <Hero/>
-            </main>
+  <Layout title='Inicio - Bauztel'>
+    <section className='container'>
+      <main>
+        <Hero />
+      </main>
+    </section>
+  </Layout>
+)
 
-        </section>
-    </Layout>
-);
-
-export default IndexPage;
+export default IndexPage

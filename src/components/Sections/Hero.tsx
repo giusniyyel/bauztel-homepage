@@ -1,5 +1,5 @@
-import styles from "./Hero.module.scss";
-import Image from "next/image";
+import styles from './Hero.module.scss'
+import Image from 'next/image'
 const Hero = () => {
   return (
     <section className={styles.hero}>
@@ -15,28 +15,28 @@ const Hero = () => {
           <button className={styles.button}>Comprar ya!</button>
         </div>
         <Image
-          src="/hero.png"
+          src='/hero.png'
           height={500}
           width={300}
-          objectFit="contain"
-          layout="fixed"
+          objectFit='contain'
+          layout='fixed'
           className={styles.image}
-          alt="Café Bauztel"
+          alt='Café Bauztel'
         />
       </div>
       <ul className={styles.features}>
-        <Feature count={10} name="Molido" />
-        <Feature count={10} name="Gourmet" />
-        <Feature count={10} name="Tostado" />
+        <Feature count={10} name='Molido' />
+        <Feature count={10} name='Gourmet' />
+        <Feature count={10} name='Tostado' />
       </ul>
     </section>
-  );
-};
+  )
+}
 
 const Feature = ({ count, name }: any) => (
   <li className={styles.item}>
     <span className={styles.count}>{count}</span>
     <span className={styles.name}>{name}</span>
   </li>
-);
-export default Hero;
+)
+export default Hero

@@ -1,6 +1,6 @@
-import type { NextComponentType, NextPageContext } from "next"
-import type { NextRouter } from "next/router"
-import "#styles/theme.scss"
+import type { NextComponentType, NextPageContext } from 'next'
+import type { NextRouter } from 'next/router'
+import '#styles/theme.scss'
 
 export interface AppRenderProps {
   pageProps: object

@@ -1,7 +1,5 @@
-import { Layout } from "../../components/Layout/Main";
+import { Layout } from '../../components/Layout/Main'
 
-const AboutUsPage = () => (
-  <Layout title="Inicio - Bauztel"></Layout>
-);
+const AboutUsPage = () => <Layout title='Inicio - Bauztel'></Layout>
 
-export default AboutUsPage;
+export default AboutUsPage

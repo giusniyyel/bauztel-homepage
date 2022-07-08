@@ -1,29 +1,29 @@
-import ProductCard from "./ProductCard";
-import styles from "./Products.module.scss";
+import ProductCard from './ProductCard'
+import styles from './Products.module.scss'
 
 const products = [
   {
-    id: "1",
-    image: "/hero.png",
-    name: "Producto 1",
-    description: "Descripción del producto 1",
+    id: '1',
+    image: '/hero.png',
+    name: 'Producto 1',
+    description: 'Descripción del producto 1',
     price: 100,
   },
   {
-    id: "2",
-    image: "/hero.png",
-    name: "Producto 2",
-    description: "Descripción del producto 2",
+    id: '2',
+    image: '/hero.png',
+    name: 'Producto 2',
+    description: 'Descripción del producto 2',
     price: 200,
   },
   {
-    id: "3",
-    image: "/hero.png",
-    name: "Producto 3",
-    description: "Descripción del producto 3",
+    id: '3',
+    image: '/hero.png',
+    name: 'Producto 3',
+    description: 'Descripción del producto 3',
     price: 300,
   },
-];
+]
 
 const Products = () => {
   return (
@@ -37,7 +37,7 @@ const Products = () => {
       </div>
       <div className={styles.products}>
         <div className={styles.slider}>
-          {products.map((product) => (
+          {products.map(product => (
             <ProductCard {...product} key={product.id} />
           ))}
         </div>
@@ -51,6 +51,6 @@ const Products = () => {
         </div>
       </div>
     </section>
-  );
-};
-export default Products;
+  )
+}
+export default Products

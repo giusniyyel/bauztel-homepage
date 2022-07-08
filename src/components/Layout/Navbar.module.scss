@@ -1,24 +1,24 @@
 .header {
-    position: sticky;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-inline: var(--layout-padding);
+  position: sticky;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: var(--layout-padding);
 }
-.navbar{
-    display: flex;
-    gap: 20px;
-    align-items: center;
+.navbar {
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
 .list {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 .logo {
-    color: var(--primary);
-    font-size: 70px;
-    height: 80px;
-    display: grid;
-    place-content: center;
+  color: var(--primary);
+  font-size: 70px;
+  height: 80px;
+  display: grid;
+  place-content: center;
 }
