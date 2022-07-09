@@ -10,9 +10,13 @@
 
 :root {
   --min-radius: 6px;
-  --primary: #220d10;
-  --primary-hvr: #422126;
-  --secondary: #cbc2b6;
+  //--primary: #220d10;
+  --primary: #1e3760;
+  //--primary-hvr: #422126;
+  --primary-hvr: #295195;
+  //--secondary: #cbc2b6;
+  --secondary: #f6a702;
+  --secondary-hvr: #ffc751;
   --accent: #b58561;
   --foreground-text: #666666;
   --background-body: #faf8f6;
@@ -99,21 +103,21 @@ input {
   border: solid 2px;
   border-radius: var(--min-radius);
   padding: 8px 10px;
-  border-color: var(--primary);
+  border-color: var(--secondary);
 }
 
 button {
   font-weight: 500;
-  background-color: var(--primary);
-  color: var(--foreground-button);
+  background-color: var(--secondary);
+  color: var(--primary);
   cursor: pointer;
   transition-property: background-color, border-color, color;
   transition: ease-in-out 0.3s;
 }
 
 button:hover {
-  background-color: var(--primary-hvr);
-  border-color: var(--primary-hvr);
+  background-color: var(--secondary-hvr);
+  border-color: var(--secondary-hvr);
 }
 
 button.secondary {

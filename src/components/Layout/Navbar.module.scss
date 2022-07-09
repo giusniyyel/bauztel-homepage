@@ -6,15 +6,22 @@
   justify-content: space-between;
   padding-inline: var(--layout-padding);
 }
+
 .navbar {
   display: flex;
   gap: 20px;
   align-items: center;
 }
+
 .list {
   display: flex;
   gap: 20px;
 }
+
+.list a:hover {
+  color: var(--primary-hvr)
+}
+
 .logo {
   color: var(--primary);
   font-size: 70px;
@@ -22,3 +29,4 @@
   display: grid;
   place-content: center;
 }
+
