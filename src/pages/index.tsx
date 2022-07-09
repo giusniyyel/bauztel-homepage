@@ -3,9 +3,7 @@ import Hero from '#components/Sections/Hero'
 const IndexPage = () => (
   <Layout title='Inicio - Bauztel'>
     <section className='container'>
-      <main>
-        <Hero />
-      </main>
+      <Hero />
     </section>
   </Layout>
 )

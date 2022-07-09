@@ -15,7 +15,7 @@ export const Layout = ({ children, title = 'Bauztel Café' }: Props) => (
     </Head>
     {/* This flex will fix the footer position to bottom of the page*/}
     <Navbar />
-    {children}
+    <main>{children}</main>
     <Footer />
   </>
 )
