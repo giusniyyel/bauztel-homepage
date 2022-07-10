@@ -28,7 +28,7 @@ export const Navbar = () => {
       <nav className={styles.navbar}>
         <ul className={styles.list}>
           <NavLink path='/' />
-          <NavLink path='/about-us' />
+          <NavLink path='/about' />
           <NavLink path='/contact' />
         </ul>
         <button>Vender ya!</button>
