@@ -1,3 +1,20 @@
+// BREAKPOINTS
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-max: 576px;
+
+// Small tablets (portrait view)
+$screen-md-max: 768px;
+
+// Tablets and small desktops
+$screen-lg-max: 992px;
+
+// Large tablets and desktops
+$screen-xl-max: 1200px;
+
+
+// MEDIA QUERYS
+
 // Small devices
 @mixin sm {
   @media (max-width: #{$screen-sm-max}) {
