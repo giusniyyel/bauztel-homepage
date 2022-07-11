@@ -1,7 +1,11 @@
 .product {
-  scroll-snap-align: center;
-  width: 200px;
-  height: 300px;
+  padding: 15px;
   border-radius: var(--min-radius);
   box-shadow: var(--card-shadow);
+  cursor: pointer;
+  transition: transform ease-in-out 0.3s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }

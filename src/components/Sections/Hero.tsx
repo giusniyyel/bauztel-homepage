@@ -14,15 +14,17 @@ const Hero = () => {
           </p>
           <button className={styles.button}>Comprar ya!</button>
         </div>
-        <Image
-          src='/hero.png'
-          height={500}
-          width={300}
-          objectFit='contain'
-          layout='fixed'
-          className={styles.image}
-          alt='Café Bauztel'
-        />
+
+        <div className={styles.image}>
+          <Image
+            src='/hero.png'
+            height={500}
+            width={300}
+            objectFit='contain'
+            layout='fixed'
+            alt='Café Bauztel'
+          />
+        </div>
       </div>
       <ul className={styles.features}>
         <Feature count={10} name='Molido' />

@@ -1,25 +1,48 @@
+@import 'mixins';
+
 .hero {
   height: calc(100vh - var(--header-height));
   display: grid;
   align-items: center;
   grid-template-columns: 85% 15%;
+
+  @include lg {
+    height: 100%;
+    grid-template-columns: 1fr;
+  }
 }
 
 .wrapper {
-  // max-width: 85%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+
+  @include md {
+    grid-template-columns: 1fr;
+  }
+}
+
+.info {
+  @include md {
+    grid-row: 2;
+  }
+}
+
+.image {
+  display: grid;
+  place-content: center;
 }
 
 .title {
   font-size: 80px;
-  // max-width: 50%;
+
+  @include lg {
+    font-size: 60px;
+  }
 }
 
 .description {
   font-size: 22px;
-  // max-width: 50%;
   line-height: 1.7;
   margin-bottom: 20px;
 }
@@ -35,6 +58,12 @@
   display: grid;
   align-content: space-around;
   grid-template-rows: repeat(3, 1fr);
+
+  @include lg {
+    margin-top: 40px;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .item {

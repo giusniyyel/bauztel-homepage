@@ -1,22 +1,26 @@
 @import 'mixins';
 
 .container {
-  margin-block: 100px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
 
-  @include tablet {
-    grid-template-columns: 1fr 400px;
+  @include xl {
+    grid-template-columns: 1fr 1.2fr;
   }
 
-  @include mobile {
+  @include md {
     grid-template-columns: 1fr;
   }
 }
 
 .heading {
   font-size: 60px;
+
+  @include lg {
+    font-size: 50px;
+  }
+
 }
 
 .description {
@@ -25,18 +29,26 @@
 
 .wrapper {
   max-width: 85%;
+
+  @include lg {
+    max-width: 100%;
+    margin-bottom: 45px;
+  }
 }
 
 .slider {
-  margin: auto;
   display: grid;
-  grid-auto-flow: column;
-  gap: 5px;
-  overscroll-behavior-x: contain;
-  scroll-snap-type: x mandatory;
-  scroll-snap-align: start;
-  height: 340px;
-  overflow: hidden;
+  align-items: center;
+  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.info {
+  margin-top: 20px;
+
+  @include md {
+    margin-top: 40px;
+  }
 }
 
 .productTitle {
