@@ -122,6 +122,7 @@ export const CartIcon = () => (
     />
   </svg>
 )
+
 export const UserIcon = () => (
   <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
     <title>Mi cuenta</title>
@@ -137,6 +138,216 @@ export const UserIcon = () => (
       d='M256 304c-87 0-175.3 48-191.64 138.6C62.39 453.52 68.57 464 80 464h352c11.44 0 17.62-10.48 15.65-21.4C431.3 352 343 304 256 304z'
       fill='none'
       stroke='currentColor'
+      strokeMiterlimit='10'
+      strokeWidth='32'
+    />
+  </svg>
+)
+
+export const MoneyIcon = () => (
+  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+    <title>Cash</title>
+    <rect
+      x='32'
+      y='80'
+      width='448'
+      height='256'
+      rx='16'
+      ry='16'
+      transform='rotate(180 256 208)'
+      fill='none'
+      stroke='currentColor'
+      strokeLinejoin='round'
+      strokeWidth='32'
+    />
+    <path
+      fill='none'
+      stroke='currentColor'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth='32'
+      d='M64 384h384M96 432h320'
+    />
+    <circle
+      cx='256'
+      cy='208'
+      r='80'
+      fill='none'
+      stroke='currentColor'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth='32'
+    />
+    <path
+      d='M480 160a80 80 0 01-80-80M32 160a80 80 0 0080-80M480 256a80 80 0 00-80 80M32 256a80 80 0 0180 80'
+      fill='none'
+      stroke='currentColor'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth='32'
+    />
+  </svg>
+)
+
+export const SaveIcon = () => (
+  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+    <title>Shield Checkmark</title>
+    <path
+      fill='none'
+      stroke='currentColor'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth='32'
+      d='M336 176L225.2 304 176 255.8'
+    />
+    <path
+      d='M463.1 112.37C373.68 96.33 336.71 84.45 256 48c-80.71 36.45-117.68 48.33-207.1 64.37C32.7 369.13 240.58 457.79 256 464c15.42-6.21 223.3-94.87 207.1-351.63z'
+      fill='none'
+      stroke='currentColor'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth='32'
+    />
+  </svg>
+)
+
+export const MedalIcon = () => (
+  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+    <title>Medal</title>
+    <circle
+      cx='256'
+      cy='352'
+      r='112'
+      fill='none'
+      stroke='currentColor'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth='32'
+    />
+    <circle
+      cx='256'
+      cy='352'
+      r='48'
+      fill='none'
+      stroke='currentColor'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth='32'
+    />
+    <path
+      d='M147 323L41.84 159.32a32 32 0 01-1.7-31.61l31-62A32 32 0 0199.78 48h312.44a32 32 0 0128.62 17.69l31 62a32 32 0 01-1.7 31.61L365 323M371 144H37M428.74 52.6L305 250M140.55 144L207 250'
+      fill='none'
+      stroke='currentColor'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth='32'
+    />
+  </svg>
+)
+
+export const StoreIcon = () => (
+  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+    <title>Storefront</title>
+    <path
+      fill='none'
+      stroke='currentColor'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth='32'
+      d='M448 448V240M64 240v208M382.47 48H129.53c-21.79 0-41.47 12-49.93 30.46L36.3 173c-14.58 31.81 9.63 67.85 47.19 69h2c31.4 0 56.85-25.18 56.85-52.23 0 27 25.46 52.23 56.86 52.23s56.8-23.38 56.8-52.23c0 27 25.45 52.23 56.85 52.23s56.86-23.38 56.86-52.23c0 28.85 25.45 52.23 56.85 52.23h1.95c37.56-1.17 61.77-37.21 47.19-69l-43.3-94.54C423.94 60 404.26 48 382.47 48zM32 464h448M136 288h80a24 24 0 0124 24v88h0-128 0v-88a24 24 0 0124-24zM288 464V312a24 24 0 0124-24h64a24 24 0 0124 24v152'
+    />
+  </svg>
+)
+
+export const WalletIcon = () => (
+  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+    <title>Wallet</title>
+    <rect
+      x='48'
+      y='144'
+      width='416'
+      height='288'
+      rx='48'
+      ry='48'
+      fill='none'
+      stroke='currentColor'
+      strokeLinejoin='round'
+      strokeWidth='32'
+    />
+    <path
+      d='M411.36 144v-30A50 50 0 00352 64.9L88.64 109.85A50 50 0 0048 159v49'
+      fill='none'
+      stroke='currentColor'
+      strokeLinejoin='round'
+      strokeWidth='32'
+    />
+    <path d='M368 320a32 32 0 1132-32 32 32 0 01-32 32z' />
+  </svg>
+)
+
+export const HappyIcon = () => (
+  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+    <title>Happy</title>
+    <circle cx='184' cy='232' r='24' />
+    <path d='M256.05 384c-45.42 0-83.62-29.53-95.71-69.83a8 8 0 017.82-10.17h175.69a8 8 0 017.82 10.17c-11.99 40.3-50.2 69.83-95.62 69.83z' />
+    <circle cx='328' cy='232' r='24' />
+    <circle
+      cx='256'
+      cy='256'
+      r='208'
+      fill='none'
+      stroke='currentColor'
+      strokeMiterlimit='10'
+      strokeWidth='32'
+    />
+  </svg>
+)
+
+export const PlaneIcon = () => (
+  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+    <title>Airplane</title>
+    <path
+      d='M407.72 224c-3.4 0-14.79.1-18 .3l-64.9 1.7a1.83 1.83 0 01-1.69-.9L193.55 67.56a9 9 0 00-6.66-3.56H160l73 161a2.35 2.35 0 01-2.26 3.35l-121.69 1.8a8.06 8.06 0 01-6.6-3.1l-37-45c-3-3.9-8.62-6-13.51-6H33.08c-1.29 0-1.1 1.21-.75 2.43l19.84 71.42a16.3 16.3 0 010 11.9L32.31 333c-.59 1.95-.52 3 1.77 3H52c8.14 0 9.25-1.06 13.41-6.3l37.7-45.7a8.19 8.19 0 016.6-3.1l120.68 2.7a2.7 2.7 0 012.43 3.74L160 448h26.64a9 9 0 006.65-3.55L323.14 287c.39-.6 2-.9 2.69-.9l63.9 1.7c3.3.2 14.59.3 18 .3C452 288.1 480 275.93 480 256s-27.88-32-72.28-32z'
+      fill='none'
+      stroke='currentColor'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth='32'
+    />
+  </svg>
+)
+
+export const PeopleIcon = () => (
+  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+    <title>People</title>
+    <path
+      d='M402 168c-2.93 40.67-33.1 72-66 72s-63.12-31.32-66-72c-3-42.31 26.37-72 66-72s69 30.46 66 72z'
+      fill='none'
+      stroke='currentColor'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth='32'
+    />
+    <path
+      d='M336 304c-65.17 0-127.84 32.37-143.54 95.41-2.08 8.34 3.15 16.59 11.72 16.59h263.65c8.57 0 13.77-8.25 11.72-16.59C463.85 335.36 401.18 304 336 304z'
+      fill='none'
+      stroke='currentColor'
+      strokeMiterlimit='10'
+      strokeWidth='32'
+    />
+    <path
+      d='M200 185.94c-2.34 32.48-26.72 58.06-53 58.06s-50.7-25.57-53-58.06C91.61 152.15 115.34 128 147 128s55.39 24.77 53 57.94z'
+      fill='none'
+      stroke='currentColor'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth='32'
+    />
+    <path
+      d='M206 306c-18.05-8.27-37.93-11.45-59-11.45-52 0-102.1 25.85-114.65 76.2-1.65 6.66 2.53 13.25 9.37 13.25H154'
+      fill='none'
+      stroke='currentColor'
+      strokeLinecap='round'
       strokeMiterlimit='10'
       strokeWidth='32'
     />
