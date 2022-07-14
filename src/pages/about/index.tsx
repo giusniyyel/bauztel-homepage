@@ -1,4 +1,11 @@
 import { Layout } from '../../components/Layout/Main'
+import {
+  MedalIcon,
+  PeopleIcon,
+  PlaneIcon,
+  SaveIcon,
+  StoreIcon,
+} from '../../shared/data/Logos'
 
 const AboutUsPage = () => (
   <Layout title='Inicio - Bauztel'>
@@ -60,30 +67,41 @@ const AboutUsPage = () => (
     <section>
       <h1>Ventaja competitiva</h1>
       <div>
-        <div>{/* Icono */}</div>
+        <div>
+          <MedalIcon />
+        </div>
         <p>Calidad a precio justo</p>
       </div>
       <div>
-        <div>{/* Icono */}</div>
+        <div>
+          <PeopleIcon />
+        </div>
         <p>Sin intermediarios</p>
       </div>
       <div>
-        <div>{/* Icono */}</div>
+        <div>
+          <SaveIcon />
+        </div>
         <p>Normas estrictas de calidad al producir</p>
       </div>
       <div>
-        <div>{/* Icono */}</div>
+        <div>
+          <StoreIcon />
+        </div>
         <p>Instalaciones abiertas al cliente</p>
       </div>
       <div>
-        <div>{/* Icono */}</div>
+        <div>
+          <PlaneIcon />
+        </div>
         <p>Envío gratis al mayoreo en el sureste</p>
       </div>
     </section>
     <section>
       <p>Nuestra tecnología</p>
       <p>Si amas el café ¿No te has preguntado de dónde proviene?</p>
-      <div>{/* video */}</div>
+      <div>
+      </div>
     </section>
   </Layout>
 )
