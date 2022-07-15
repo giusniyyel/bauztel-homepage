@@ -112,12 +112,17 @@ h4 {
 }
 
 button,
-input {
+input,
+textarea {
   outline: none;
   border: solid 2px;
   border-radius: var(--min-radius);
   padding: 8px 10px;
   border-color: var(--secondary);
+}
+
+textarea {
+  resize: none;
 }
 
 button {
