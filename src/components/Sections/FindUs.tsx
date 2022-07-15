@@ -23,7 +23,7 @@ export const FindUs = () => {
 const Day = ({ day, hours }) => {
   return (
     <div className={styles.day}>
-      <h3>{day}</h3>
+      <p>{day}</p>
       <div>{/* dots */}</div>
       <span>{hours}</span>
     </div>
