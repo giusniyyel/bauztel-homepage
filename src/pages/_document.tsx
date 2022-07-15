@@ -1,34 +1,30 @@
-import NextDocument, {
-  Html,
-  Head,
-  Main,
-  NextScript,
-  DocumentContext,
-} from 'next/document'
+import { Html, Head, Main, NextScript } from 'next/document'
 
-export default class Document extends NextDocument {
-  static getInitialProps(ctx: DocumentContext) {
-    return NextDocument.getInitialProps(ctx)
-  }
-
-  render() {
-    return (
-      <Html>
-        <Head>
-          <link
-            href='https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap'
-            rel='stylesheet'
-          />
-          <link
-            href='https://fonts.googleapis.com/css2?family=DM+Sans&family=Playfair+Display&display=swap'
-            rel='stylesheet'
-          />
-        </Head>
-        <body>
-          <Main />
-          <NextScript />
-        </body>
-      </Html>
-    )
-  }
+export default function Document() {
+  return (
+    <Html lang='es'>
+      <Head>
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin=''/>
+        <link
+          href='https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Playfair+Display:wght@600&display=swap'
+          rel='stylesheet'
+          crossOrigin='anonymous'
+        />
+        <link
+          rel='shortcut icon'
+          href='/logo.svg'
+          type='image/svg+xml'
+        />
+        <meta
+          content='max-snippet:-1, max-image-preview:large, max-video-preview:-1'
+          name='robots'
+        />
+      </Head>
+      <body>
+        <Main />
+        <NextScript />
+      </body>
+    </Html>
+  )
 }
