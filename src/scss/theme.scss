@@ -1,15 +1,16 @@
 @import 'mixins';
 
-/* FONTS TO USE (I DON'T KNOW HOW TO IMPORT IT) 
-  @FONT-FACE {
-    font-family: 'Playfair Display';
-    src: url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap') format('truetype');
-  }
-  @FONT-FACE {
-    font-family: 'DM Sans';
-    src: url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Playfair+Display&display=swap') format('truetype');
-  } 
-*/
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  src: url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Playfair+Display&display=swap') format('truetype');
+}
 
 * {
   margin: 0;
