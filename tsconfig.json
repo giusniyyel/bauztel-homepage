@@ -6,10 +6,10 @@
     "paths": {
       "#styles/*": ["./scss/*"],
       "#components/*": ["./components/*"],
-      "#data/": ["./shared/data/*"],
-      "#utils/": ["./shared/utils/*"],
-      "#libs/": ["./shared/libs/*"],
-      "#types/": ["./shared/types"]
+      "#data/*": ["./shared/data/*"],
+      "#utils/*": ["./shared/utils/*"],
+      "#libs/*": ["./shared/libs/*"],
+      "#types": ["./shared/types"]
     },
     "allowJs": true,
     "skipLibCheck": true,
