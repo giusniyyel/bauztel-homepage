@@ -1,10 +1,14 @@
+@import 'mixins';
+
 .header {
   position: sticky;
+  top: 0;
   height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-inline: var(--layout-padding);
+  z-index: 9999;
 }
 
 .navbar {
@@ -16,6 +20,36 @@
 .list {
   display: flex;
   gap: 20px;
+
+  @include md {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    right: 5px;
+    top: 85px;
+    flex-direction: column;
+    background-color: var(--background-card);
+    border-radius: var(--min-radius);
+    padding: 20px;
+    box-shadow: var(--card-shadow);
+  }
+
+  &.active {
+    display: flex;
+  }
+}
+
+.menu {
+  display: none;
+  color: var(--primary);
+
+  @include md {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    font-size: 18px;
+  }
 }
 
 .list a:hover {
@@ -30,3 +64,9 @@
   place-content: center;
 }
 
+.cart,
+.user {
+  display: grid;
+  place-content: center;
+  color: var(--primary);
+}

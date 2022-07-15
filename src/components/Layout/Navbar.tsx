@@ -1,7 +1,7 @@
-//import { useRouter } from 'next/router'
 import Link from 'next/link'
 import styles from './Navbar.module.scss'
-import { Bauztel, CartIcon, UserIcon } from '../../shared/data/Logos'
+import { Bauztel, CartIcon, MenuIcon, UserIcon } from '../../shared/data/Logos'
+import { useState } from 'react'
 
 const navLinks = {
   '/': 'Inicio',
@@ -18,15 +18,15 @@ const NavLink = ({ path }: { path: string }) => {
   )
 }
 export const Navbar = () => {
-  // const { asPath } = useRouter()
-
+  const [isOpen, setIsOpen] = useState(false)
+  const handleClick = () => setIsOpen(!isOpen)
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
         <Bauztel />
       </div>
       <nav className={styles.navbar}>
-        <ul className={styles.list}>
+        <ul className={styles.list + ` ${isOpen ? styles.active : ''}`}>
           <NavLink path='/' />
           <NavLink path='/about' />
           <NavLink path='/contact' />
@@ -35,9 +35,12 @@ export const Navbar = () => {
         <span className={styles.cart}>
           <CartIcon />
         </span>
-        <span className={styles.cart}>
+        <span className={styles.user}>
           <UserIcon />
         </span>
+        <button className={styles.menu} onClick={handleClick}>
+          <MenuIcon/>
+        </button>
       </nav>
     </header>
   )
