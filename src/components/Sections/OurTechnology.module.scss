@@ -1,0 +1,23 @@
+.section {
+  margin-inline: var(--layout-padding);
+}
+
+.title_container {
+  text-align: center;
+  
+  > h2 {
+    font-size: 46px;
+  }
+
+  > p {
+    font-size: 18px;
+  }
+}
+
+.element_container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1140px;
+  margin-right: auto;
+  margin-left: auto;
+}

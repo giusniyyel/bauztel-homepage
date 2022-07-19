@@ -1,0 +1,140 @@
+.main_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.text_box,
+.image_box {
+  width: 100%;
+  height: 100vh;
+}
+
+.text_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: var(--layout-padding);
+
+  h1 {
+    font-size: 50px;
+    margin-block: 12px;
+
+    em {
+      font-family: 'Playfair Display', sans-serif;
+    }
+  }
+}
+
+.horizontal_divider {
+  height: 2px;
+  width: 40px;
+  margin-top: 14px;
+  margin-bottom: 16px;
+  background-color: var(--secondary);
+}
+
+.wrap_container {
+  max-width: 768px;
+  word-wrap: break-word;
+}
+
+.main_content {
+  margin-top: 24px;
+  line-height: 1.75em;
+  font-size: 18px;
+}
+
+.image_box {
+  background-image: url('https://www.amayatheme.redsun.design/roastery/wp-content/uploads/sites/2/2020/12/coffeebean-beans-square.jpg');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h4 {
+    color: white;
+    font-size: 32px;
+    margin-block: 12px;
+  }
+}
+
+.mission_container {
+  margin-top: 114px;
+  margin-bottom: 82px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.subtitle_above {
+  color: var(--secondary);
+  font-size: 0.8em;
+  letter-spacing: 2px;
+  line-height: 1.75em;
+  text-transform: uppercase;
+}
+
+.heading {
+  margin-top: 12px;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.vertical_divider {
+  margin-inline: auto;
+  height: 40px;
+  width: 2px;
+  margin-top: 14px;
+  margin-bottom: 16px;
+  background-color: var(--secondary);
+}
+
+.mission_description {
+  line-height: 1.75em;
+  max-width: 700px;
+  font-size: 18px;
+}
+
+.values {
+  padding-top: 114px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  h2 {
+    margin-top: 12px;
+    margin-bottom: 48px;
+    font-size: 40px;
+    font-weight: 500;
+  }
+}
+
+.values_container {
+  display: grid;
+  background-color: white;
+  margin-inline: var(--layout-padding);
+  width: 100%;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.values_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 418px;
+
+  p {
+    font-size: 18px;
+    margin-block: 12px;
+  }
+}
+
+.values_icon {
+  font-size: 2.5em;
+  margin-bottom: 16px;
+  color: var(--primary);
+}
