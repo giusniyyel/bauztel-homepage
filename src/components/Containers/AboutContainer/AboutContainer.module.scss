@@ -1,28 +1,29 @@
+@import 'mixins';
+
 .main_container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: center;
+  height: calc(100vh - var(--header-height));
+  gap: 30px;
+  @include md{
+    height: 100%;
+    grid-template-columns: 1fr
+  }
 }
-
-.text_box,
-.image_box {
-  width: 100%;
-  height: 100vh;
-}
-
 .text_box {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-left: var(--layout-padding);
-
   h1 {
-    font-size: 50px;
+    font-size: var(--font-title);
     margin-block: 12px;
-
     em {
       font-family: 'Playfair Display', sans-serif;
     }
   }
+
 }
 
 .horizontal_divider {
@@ -41,21 +42,36 @@
 .main_content {
   margin-top: 24px;
   line-height: 1.75em;
-  font-size: 18px;
+  font-size: var(--font-paragraph);
 }
 
 .image_box {
-  background-image: url('https://www.amayatheme.redsun.design/roastery/wp-content/uploads/sites/2/2020/12/coffeebean-beans-square.jpg');
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  .img {
+    border-radius: var(--mid-radius);
+  }
   h4 {
-    color: white;
-    font-size: 32px;
-    margin-block: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+    color:#fff;
+    letter-spacing: 1px;
+    font-size: 34px;
+    text-shadow: 1px 1px 1px var(--primary);
+  }
+  @include md{
+    grid-row: 1;
   }
 }
 
@@ -70,15 +86,16 @@
 
 .subtitle_above {
   color: var(--secondary);
-  font-size: 0.8em;
+  font-size: var(--font-subtitle);
   letter-spacing: 2px;
   line-height: 1.75em;
   text-transform: uppercase;
+  filter: brightness(0.9);
 }
 
 .heading {
   margin-top: 12px;
-  font-size: 40px;
+  font-size:var(--font-heading);
   font-weight: 500;
 }
 
@@ -94,7 +111,7 @@
 .mission_description {
   line-height: 1.75em;
   max-width: 700px;
-  font-size: 18px;
+  font-size: var(--font-paragraph);
 }
 
 .values {
@@ -107,7 +124,7 @@
   h2 {
     margin-top: 12px;
     margin-bottom: 48px;
-    font-size: 40px;
+    font-size: var(--font-heading);
     font-weight: 500;
   }
 }
@@ -115,9 +132,18 @@
 .values_container {
   display: grid;
   background-color: white;
-  margin-inline: var(--layout-padding);
+  padding-inline: var(--layout-padding);
   width: 100%;
   grid-template-columns: repeat(5, 1fr);
+  @include lg{
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include md{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include sm{
+    grid-template-columns: 1fr;
+  }
 }
 
 .values_item {
@@ -128,13 +154,13 @@
   height: 418px;
 
   p {
-    font-size: 18px;
+    font-size: var(--font-paragraph);
     margin-block: 12px;
   }
 }
 
 .values_icon {
-  font-size: 2.5em;
+  font-size: var(--font-heading);
   margin-bottom: 16px;
   color: var(--primary);
 }

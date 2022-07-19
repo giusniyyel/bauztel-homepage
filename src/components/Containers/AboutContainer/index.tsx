@@ -7,6 +7,7 @@ import {
 } from '#data/Logos'
 import OurTechnology from '#components/Sections/OurTechnology'
 import styles from './AboutContainer.module.scss'
+import Image from 'next/image'
 
 const AboutContainer = () => {
   return (
@@ -30,11 +31,17 @@ const AboutContainer = () => {
           </div>
         </div>
         <div className={styles.image_box}>
-          <h4>Café hecho con el corazón</h4>
+          <Image 
+            className={styles.img} 
+            src='/about.jpg' 
+            width={650} height={520} 
+            objectFit='cover' 
+            layout='intrinsic' 
+            />
+            <h4>Café hecho con el corazón</h4>
         </div>
       </section>
       <section className={styles.mission_container}>
-        <div className={styles.wrap_container}>
           <span className={styles.subtitle_above}>Nuestra misión</span>
           <h2 className={styles.heading}>Un café exquisito para tu cuerpo</h2>
           <div className={styles.vertical_divider}>{/* Divider */}</div>
@@ -45,7 +52,6 @@ const AboutContainer = () => {
               bebida intensa que active su energía corporal y obtenga los
               beneficios que el café proporciona a través de nuestra marca.
             </p>
-          </div>
         </div>
       </section>
       <OurTechnology />

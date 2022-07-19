@@ -11,6 +11,7 @@
 
 :root {
   --min-radius: 6px;
+  --mid-radius: 12px;
   //--primary: #220d10;
   --primary: #1e3760;
   //--primary-hvr: #422126;
@@ -38,6 +39,18 @@
 
   @include md {
     --layout-padding: 10px;
+  }
+
+  --font-title: 62px;
+  --font-heading: 55px;
+  --font-subtitle: 20px;
+  --font-paragraph: 20px;
+  @include lg{
+    --font-title: 42px;
+    --font-paragraph: 17px;
+  }
+  @include md{
+    --font-title: 48px
   }
 }
 
