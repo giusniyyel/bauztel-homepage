@@ -6,9 +6,9 @@
   align-items: center;
   height: calc(100vh - var(--header-height));
   gap: 30px;
-  @include md{
+  @include md {
     height: 100%;
-    grid-template-columns: 1fr
+    grid-template-columns: 1fr;
   }
 }
 .text_box {
@@ -24,6 +24,11 @@
     }
   }
 
+  @include md {
+    padding: 48px 24px;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .horizontal_divider {
@@ -65,19 +70,15 @@
     height: 100%;
     display: grid;
     place-content: center;
-    color:#fff;
+    color: #fff;
     letter-spacing: 1px;
     font-size: 34px;
     text-shadow: 1px 1px 1px var(--primary);
   }
-  @include md{
-    grid-row: 1;
-  }
 }
 
 .mission_container {
-  margin-top: 114px;
-  margin-bottom: 82px;
+  margin-bottom: 140px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -95,7 +96,7 @@
 
 .heading {
   margin-top: 12px;
-  font-size:var(--font-heading);
+  font-size: var(--font-heading);
   font-weight: 500;
 }
 
@@ -115,7 +116,7 @@
 }
 
 .values {
-  padding-top: 114px;
+  padding-top: 124px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -132,16 +133,15 @@
 .values_container {
   display: grid;
   background-color: white;
-  padding-inline: var(--layout-padding);
   width: 100%;
   grid-template-columns: repeat(5, 1fr);
-  @include lg{
+  @include lg {
     grid-template-columns: repeat(3, 1fr);
   }
-  @include md{
+  @include md {
     grid-template-columns: repeat(2, 1fr);
   }
-  @include sm{
+  @include sm {
     grid-template-columns: 1fr;
   }
 }

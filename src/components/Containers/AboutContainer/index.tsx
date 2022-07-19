@@ -31,27 +31,29 @@ const AboutContainer = () => {
           </div>
         </div>
         <div className={styles.image_box}>
-          <Image 
-            className={styles.img} 
-            src='/about.jpg' 
-            width={650} height={520} 
-            objectFit='cover' 
-            layout='intrinsic' 
-            />
-            <h4>Café hecho con el corazón</h4>
+          <Image
+            className={styles.img}
+            src='/about.jpg'
+            width={650}
+            height={520}
+            objectFit='cover'
+            layout='intrinsic'
+            alt='Café hecho con amor'
+          />
+          <h4>Café hecho con amor</h4>
         </div>
       </section>
       <section className={styles.mission_container}>
-          <span className={styles.subtitle_above}>Nuestra misión</span>
-          <h2 className={styles.heading}>Un café exquisito para tu cuerpo</h2>
-          <div className={styles.vertical_divider}>{/* Divider */}</div>
-          <div className={styles.mission_description}>
-            <p>
-              Nos comprometemos con nuestros clientes a ofrecer un producto con
-              aroma y sabor exquisito que les permita saborear y compartir una
-              bebida intensa que active su energía corporal y obtenga los
-              beneficios que el café proporciona a través de nuestra marca.
-            </p>
+        <span className={styles.subtitle_above}>Nuestra misión</span>
+        <h2 className={styles.heading}>Un café exquisito para tu cuerpo</h2>
+        <div className={styles.vertical_divider}>{/* Divider */}</div>
+        <div className={styles.mission_description}>
+          <p>
+            Nos comprometemos con nuestros clientes a ofrecer un producto con
+            aroma y sabor exquisito que les permita saborear y compartir una
+            bebida intensa que active su energía corporal y obtenga los
+            beneficios que el café proporciona a través de nuestra marca.
+          </p>
         </div>
       </section>
       <OurTechnology />
