@@ -9,12 +9,20 @@
   justify-content: space-between;
   padding-inline: var(--layout-padding);
   z-index: 9999;
+  box-shadow: 0 0 24px rgba(10, 10, 20, 0.06);
 }
 
 .navbar {
   display: flex;
   gap: 20px;
   align-items: center;
+}
+
+.link {
+  font-weight: 600;
+  font-size: 0.8em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .list {
@@ -53,15 +61,19 @@
 }
 
 .list a:hover {
-  color: var(--primary-hvr)
+  color: var(--secondary-hvr);
 }
 
 .logo {
   color: var(--primary);
-  font-size: 70px;
+  font-size: 90px;
   height: 80px;
   display: grid;
   place-content: center;
+
+  @include lg {
+    font-size: 70px;
+  }
 }
 
 .cart,
