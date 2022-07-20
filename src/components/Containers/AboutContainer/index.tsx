@@ -16,7 +16,7 @@ const AboutContainer = () => {
         <div className={styles.text_box}>
           <span className={styles.subtitle_above}>Nosotros</span>
           <h1>
-            <em>Dedicados</em> a la calidad
+            <em>Dedicados</em> a la Calidad
           </h1>
           <div className={styles.horizontal_divider}>{/* Divider */}</div>
           <div className={styles.wrap_container}>
