@@ -7,6 +7,7 @@ const navLinks = {
   '/': 'Inicio',
   '/about': 'Nosotros',
   '/contact': 'Contáctanos',
+  '/become-seller': 'Vender Café',
 }
 
 const NavLink = ({ path }: { path: string }) => {
@@ -30,16 +31,16 @@ export const Navbar = () => {
           <NavLink path='/' />
           <NavLink path='/about' />
           <NavLink path='/contact' />
+          <NavLink path='/become-seller' />
         </ul>
-        <button>Vender ya!</button>
-        <span className={styles.cart}>
-          <CartIcon />
-        </span>
         <span className={styles.user}>
           <UserIcon />
         </span>
+        <span className={styles.cart}>
+          <CartIcon />
+        </span>
         <button className={styles.menu} onClick={handleClick}>
-          <MenuIcon/>
+          <MenuIcon />
         </button>
       </nav>
     </header>
